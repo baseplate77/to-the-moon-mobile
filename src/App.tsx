@@ -7,10 +7,10 @@ function App() {
 
 
   const { unityProvider ,isLoaded ,loadingProgression  } = useUnityContext({
-    loaderUrl: "build/webBuild.loader.js",
-    dataUrl: "build/webBuild.data",
-    frameworkUrl: "build/webBuild.framework.js",
-    codeUrl: "build/webuild.wasm",
+    loaderUrl: "Build/webBuild.loader.js",
+    dataUrl: "Build/webBuild.data",
+    frameworkUrl: "Build/webBuild.framework.js",
+    codeUrl: "Build/webBuild.wasm",
   });
 
   const loadingPercentage = Math.round(loadingProgression * 100);
