@@ -3,10 +3,14 @@ import Game from "./components/Game";
 function App() {
   return (
     <div className="bg-black">
-      <div className="gradient-background px-48 py-6 pb-32">
+      <div className="gradient-background px-4 sm:px-48 py-6 pb-32">
         <div className="flex justify-between items-center">
-          <h1 className="text-2xl text-white font-bold ">To the Moon</h1>
-          <button className=" font-bold tracking-wider">Connect Wallet</button>
+          <h1 className="mx-auto sm:mx-0 text-2xl text-white font-bold ">
+            To the Moon
+          </h1>
+          <button className="hidden sm:block font-bold tracking-wider">
+            Connect Wallet
+          </button>
         </div>
 
         <div className="my-6"></div>
