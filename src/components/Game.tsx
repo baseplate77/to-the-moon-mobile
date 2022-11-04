@@ -1,6 +1,5 @@
-import React from "react";
 import { Unity, useUnityContext } from "react-unity-webgl";
-import "./Game.css";
+import "../styles/game.css";
 
 type GameProps = {};
 
@@ -13,6 +12,7 @@ function Game({}: GameProps) {
   });
 
   const loadingPercentage = Math.round(loadingProgression * 100);
+
   return (
     <div className="container">
       {isLoaded === false && (
@@ -26,4 +26,3 @@ function Game({}: GameProps) {
 }
 
 export default Game;
-
