@@ -1,3 +1,4 @@
+import { Button } from "./components/Button";
 import Game from "./components/Game";
 
 function App() {
@@ -8,9 +9,7 @@ function App() {
           <h1 className="mx-auto sm:mx-0 text-2xl text-white font-bold ">
             To the Moon
           </h1>
-          <button className="hidden sm:block font-bold tracking-wider">
-            Connect Wallet
-          </button>
+          <Button />
         </div>
 
         <div className="my-6"></div>
