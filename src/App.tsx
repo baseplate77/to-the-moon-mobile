@@ -1,13 +1,31 @@
+import React from "react";
 import { Button } from "./components/Button";
 import Game from "./components/Game";
 
 function App() {
+  const gameRef = React.useRef<HTMLDivElement>(null);
+
+  const scrollToGame = () => {
+    if (gameRef && gameRef.current) {
+      window.scrollTo({
+        behavior: "smooth",
+        top: gameRef.current.offsetTop - 20,
+      });
+    }
+  };
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      scrollToGame();
+    }, 1700);
+  }, []);
+
   return (
     <div className="bg-black">
       <div className="gradient-background px-4 sm:px-48 py-6 pb-32">
         <div className="flex justify-between items-center">
           <h1 className="mx-auto sm:mx-0 text-2xl text-white font-bold ">
-            To the Moon
+            To the Mooon
           </h1>
           <Button />
         </div>
@@ -16,7 +34,7 @@ function App() {
 
         <div className="text-center mx-auto">
           <h3 className="font-bold text-3xl tracking-wider">
-            Play and earn <span className="text-[#B98DDB]">$TRON</span>
+            Play and earn <span className="text-[#896DD8]">$TRON</span>
           </h3>
 
           <div className="my-2"></div>
@@ -28,8 +46,13 @@ function App() {
 
         <div className="my-8"></div>
 
-        <div className="max-w-sm mx-auto ">
+        <div className="max-w-sm mx-auto " ref={gameRef}>
           <Game />
+        </div>
+
+        <div className="my-6"></div>
+        <div className="text-center mx-auto">
+          ← Use side arrow keys to move the Bitcoin →
         </div>
 
         <div className="my-16"></div>

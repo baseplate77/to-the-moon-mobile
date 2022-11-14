@@ -7,7 +7,7 @@ type GameProps = {};
 
 function Game({}: GameProps) {
   const [score, setScore] = useState(0);
-  const [gameOver ,setGameOver] = useState(false);
+  const [gameOver, setGameOver] = useState(false);
 
   const {
     unityProvider,
@@ -34,7 +34,6 @@ function Game({}: GameProps) {
   };
 
   const loadingPercentage = Math.round(loadingProgression * 100);
-  
 
   useEffect(() => {
     addEventListener("GameOver", handleGameOver);
@@ -42,8 +41,6 @@ function Game({}: GameProps) {
       removeEventListener("GameOver", handleGameOver);
     };
   }, [addEventListener, removeEventListener, handleGameOver]);
-
-  console.log("score", score);
 
   return (
     <div className="container ">
@@ -53,10 +50,40 @@ function Game({}: GameProps) {
         </div>
       )}
 
+      {gameOver ? (
+        <div className="overlay ">
+          <div className="flex items-center justify-center flex-col h-full">
+            <h6 className="mx-auto text-center text-2xl ">Game Over</h6>
+            <p className="mx-auto text-center text-6xl ">{score}</p>
+            <div className="my-2"></div>
+            <GameStartPage handleRestart={handleRestart} />
+          </div>
+        </div>
+      ) : (
+        <></>
+      )}
+
       <Unity className="unity" unityProvider={unityProvider} />
-      <button onClick={handleRestart}>Restart </button>
     </div>
   );
 }
 
 export default Game;
+
+const GameStartPage = ({ handleRestart }: { handleRestart: any }) => {
+  return (
+    <>
+      <button className="primary-button" onClick={handleRestart}>
+        Play for Free
+      </button>
+      <div className="my-2"></div>
+      <button
+        className="disabled-button"
+        onClick={handleRestart}
+        disabled={true}
+      >
+        Play to earn $TRON (soon)
+      </button>
+    </>
+  );
+};
