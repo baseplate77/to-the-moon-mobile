@@ -1,7 +1,10 @@
 {
   "name": "unity-react",
+  "homepage": "http://baseplate77.github.io/To-the-Moon-Game",
   "version": "0.1.0",
   "private": true,
+  "predeploy" : "yarn build",
+  "deploy" : "gh-pages -d build",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
