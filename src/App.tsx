@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "./components/Button";
 import Game from "./components/Game";
 import logo from "./assets/logo.png";
+import { MobileView } from "react-device-detect";
 
 function App() {
   const gameRef = React.useRef<HTMLDivElement>(null);
@@ -44,6 +45,11 @@ function App() {
           <h6 className="max-w-sm text-center mx-auto">
             Tournament will be launched soon
           </h6>
+          <div className="my-2"></div>
+
+          <MobileView className="text-sm">
+            Please view on desktop for best experience
+          </MobileView>
         </div>
 
         <div className="my-8"></div>
