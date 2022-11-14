@@ -18,7 +18,7 @@ function App() {
   React.useEffect(() => {
     setTimeout(() => {
       scrollToGame();
-    }, 17000);
+    }, 1700);
   }, []);
 
   return (
