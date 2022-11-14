@@ -1,6 +1,5 @@
 {
   "name": "unity-react",
-  "homepage": "http://baseplate77.github.io/To-the-Moon-Game",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
