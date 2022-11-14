@@ -22,8 +22,7 @@ function App() {
           <div className="my-2"></div>
 
           <h6 className="max-w-sm text-center mx-auto">
-            Take part in today‘s prize pool of 15.0 $TRON! Pay only 0.5 $TRON to
-            play!
+            Tournament will be launched soon
           </h6>
         </div>
 
@@ -39,7 +38,7 @@ function App() {
           <div className="flex justify-between items-center">
             <h4 className="text-3xl font-bold tracking-wider">Tournament #1</h4>
             <h6 className="text-xl tracking-wider">
-              Ends in <span className="text-[#B98DDB]">22H : 32M : 20S </span>
+              Ends in <span className="text-[#B98DDB]">0H : 0M : 0S </span>
             </h6>
           </div>
 
@@ -55,6 +54,10 @@ function App() {
             <h6 className="tracking-wider uppercase text-lg text-right">
               PRIZE
             </h6>
+          </div>
+
+          <div className="w-full text-center text-lg my-4">
+            Tournaments will be launched soon
           </div>
         </div>
       </div>

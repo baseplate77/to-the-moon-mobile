@@ -1,30 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import { formatAddress } from "../helper";
+import { useAppStore } from "../store/app_state";
 
 interface ButtonProps {}
 
 export const Button = ({}: ButtonProps) => {
-  const [isConnected, setisConnected] = React.useState(false);
-  const [address, setaddress] = React.useState("");
+  const connectWallet = useAppStore((state) => state.connectWallet);
+  const isConnected = useAppStore((state) => state.currentAddress !== "");
+  const address = useAppStore((state) => state.currentAddress);
+  const balance = useAppStore((state) => state.balance);
+  const tronWeb = useAppStore((state) => state.tronWeb);
 
-  const connectWallet = async () => {
-    if (!window.tronWeb) return;
+  React.useEffect(() => {
+    connectWallet();
+  }, []);
 
-    const currentaddress = window.tronWeb.defaultAddress.base58;
-
-    setaddress(currentaddress);
-    setisConnected(true);
-
-    const balance = await window.tronWeb.trx.getAccount(currentaddress);
-
-    console.log("balance: ", balance);
-  };
+  console.log("tronweb: ", tronWeb);
 
   return (
     <>
       {isConnected ? (
-        <div>
+        <div className="flex space-x-2">
           <div className="hidden sm:block tracking-wider px-4 py-2  rounded-lg backdrop-blur-sm bg-opacity-20 bg-white">
+            {parseFloat(balance).toFixed(2)} TRX
+          </div>
+          <div
+            className="hidden cursor-copy sm:block tracking-wider px-4 py-2  rounded-lg backdrop-blur-sm bg-opacity-20 bg-white"
+            onClick={() => {
+              navigator.clipboard.writeText(address);
+            }}
+          >
             {formatAddress(address)}
           </div>
         </div>
