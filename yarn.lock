@@ -7565,10 +7565,10 @@
     "strip-ansi" "^6.0.1"
     "text-table" "^0.2.0"
 
-"react-dom@^18.0.0", "react-dom@^18.2.0":
-  "integrity" "sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g=="
-  "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
-  "version" "18.2.0"
+react-dom@^18.2.0:
+  version "18.2.0"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.2.0.tgz#22aaf38708db2674ed9ada224ca4aa708d821e3d"
+  integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
   dependencies:
     "loose-envify" "^1.1.0"
     "scheduler" "^0.23.0"
@@ -8790,10 +8790,10 @@
   "resolved" "https://registry.npmjs.org/typescript/-/typescript-4.8.4.tgz"
   "version" "4.8.4"
 
-"unbox-primitive@^1.0.2":
-  "integrity" "sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw=="
-  "resolved" "https://registry.npmjs.org/unbox-primitive/-/unbox-primitive-1.0.2.tgz"
-  "version" "1.0.2"
+unbox-primitive@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/unbox-primitive/-/unbox-primitive-1.0.2.tgz#29032021057d5e6cdbd08c5129c226dff8ed6f9e"
+  integrity sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==
   dependencies:
     "call-bind" "^1.0.2"
     "has-bigints" "^1.0.2"

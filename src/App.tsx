@@ -1,6 +1,8 @@
 import React from "react";
 import { Button } from "./components/Button";
 import Game from "./components/Game";
+import logo from "./assets/logo.png";
+import { MobileView } from "react-device-detect";
 
 function App() {
   const gameRef = React.useRef<HTMLDivElement>(null);
@@ -24,8 +26,9 @@ function App() {
     <div className="bg-black">
       <div className="gradient-background px-4 sm:px-48 py-6 pb-32">
         <div className="flex justify-between items-center">
-          <h1 className="mx-auto sm:mx-0 text-2xl text-white font-bold ">
-            To the Mooon
+          <h1 className="mx-auto flex gap-3 sm:mx-0 ">
+            <img src={logo} width={30} alt="To the Moon - Play to earn logo" />
+            <p className="text-2xl text-white font- ">To the Mooon</p>
           </h1>
           <Button />
         </div>
@@ -33,7 +36,7 @@ function App() {
         <div className="my-6"></div>
 
         <div className="text-center mx-auto">
-          <h3 className="font-bold text-3xl tracking-wider">
+          <h3 className="text-4xl tracking-wider">
             Play and earn <span className="text-[#896DD8]">$TRON</span>
           </h3>
 
@@ -42,6 +45,11 @@ function App() {
           <h6 className="max-w-sm text-center mx-auto">
             Tournament will be launched soon
           </h6>
+          <div className="my-2"></div>
+
+          <MobileView className="text-sm">
+            Please view on desktop for best experience
+          </MobileView>
         </div>
 
         <div className="my-8"></div>
